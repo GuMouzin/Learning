@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conversor-Temperatura</title>
+    <link rel="stylesheet" href="index.css">
+     <script>
+    	function cel(){
+			var cel = ((tempC.value * 1.8) + 32);
+			document.getElementById('cel').innerHTML = cel.toFixed(1) + '°C';
+		}
+
+
+		function far(){
+			var far = ((tempF.value - 32) /1.8);
+			document.getElementById('far').innerHTML = far.toFixed(1) + '°F';
+		}
+    </script>
+</head>
+<body>
+    <section>
+		<form>
+			
+			<div class="container">
+<h1>Conversor de Temperaturas</h1>
+		<div class="cloud front">
+		  <span class="left-front"></span>
+		  <span class="right-front"></span>
+		</div>
+		<span class="sun sunshine"></span>
+		<span class="sun"></span>
+		<div class="cloud back">
+		  <span class="left-back"></span>
+		  <span class="right-back"></span>
+		</div>
+	  </div>
+			
+
+			<div class="formbox">
+				
+				
+					<div class="c">							
+						<input type="text" id= "tempC" value="" required></input>
+						<label for="">Temperatura em Celsius</label>
+						<input type="button" name="c" value="Celsius para Fahrenheit" onclick="cel();">
+						<h2 id="cel"></h2>
+					</div>
+	
+		
+					<div class="f">
+					<input type="text" id="tempF" value="" required></input>
+					<label for="tempF">Temperatura em Fahrenheit:</label>
+					<input type="button" name="f" value="Fahrenheit para Celsius" onclick="far();">
+					<h2 id="far"></h2>
+					</div>
+				</div>	
+	</form>
+	
+	
+    </section>
+</body>
+</html>
